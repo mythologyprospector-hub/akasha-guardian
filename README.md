@@ -98,3 +98,7 @@ With Guardian, the ecosystem remains stable while still evolving.
 ---
 
 This repository participates in the **Akasha ecosystem** and is described by `repo-manifest.yaml`.
+
+---
+
+This repository participates in the Akasha ecosystem and is described by repo-manifest.yaml.
