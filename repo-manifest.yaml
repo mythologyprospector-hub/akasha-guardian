@@ -3,27 +3,33 @@ repo:
   ecosystem: akasha
   version: 0.1.0
   status: experimental
-
 identity:
   role: guardian
   layer: governance
-  description: >
-    Integrity and alignment inspector for Akasha repositories.
+  description: 'Integrity and alignment inspector for Akasha repositories.
 
+    '
 ownership:
   steward: human
   approval_required: true
-
 interfaces:
   consumes:
-    - akasha-axioms
-    - akasha-world
-    - akasha-constellation
+  - akasha-axioms
+  - akasha-world
+  - akasha-constellation
   produces:
-    - drift_reports
-    - alignment_proposals
-
+  - drift_reports
+  - alignment_proposals
 capabilities:
-  - repo_validation
-  - drift_detection
-  - compliance_checking
+- repo_validation
+- drift_detection
+- compliance_checking
+name: akasha-guardian
+type: module
+status:
+  maturity: experimental
+  confidence: low
+  active: true
+role: concept
+domain: systems
+depends_on: []
