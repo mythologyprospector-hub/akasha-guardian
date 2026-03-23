@@ -32,4 +32,6 @@ status:
   active: true
 role: concept
 domain: systems
-depends_on: []
+depends_on:
+- akasha-world
+- akasha-suite
