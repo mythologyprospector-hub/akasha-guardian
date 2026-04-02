@@ -35,3 +35,13 @@ domain: systems
 depends_on:
 - akasha-world
 - akasha-suite
+
+engine:
+  family: truth
+  class: validation_engine
+  role: unknown
+
+alignment:
+  axioms_required: true
+  canonical_structure: true
+  interpretation_free_core: true
