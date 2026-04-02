@@ -2,46 +2,48 @@ repo:
   name: akasha-guardian
   ecosystem: akasha
   version: 0.1.0
-  status: experimental
-identity:
-  role: guardian
-  layer: governance
-  description: 'Integrity and alignment inspector for Akasha repositories.
-
-    '
-ownership:
-  steward: human
-  approval_required: true
-interfaces:
-  consumes:
-  - akasha-axioms
-  - akasha-world
-  - akasha-constellation
-  produces:
-  - drift_reports
-  - alignment_proposals
-capabilities:
-- repo_validation
-- drift_detection
-- compliance_checking
-name: akasha-guardian
-type: module
-status:
-  maturity: experimental
-  confidence: low
-  active: true
-role: concept
-domain: systems
-depends_on:
-- akasha-world
-- akasha-suite
+  status: active
 
 engine:
   family: truth
   class: validation_engine
-  role: unknown
+  role: integrity_and_boundary_guarding
+
+identity:
+  role: engine
+  layer: governance
+  description: >
+    Guardian engine for the Akasha constellation.
+    Responsible for protecting structural integrity, watching for invalid states,
+    and helping ensure that downstream outputs remain within accepted bounds.
+
+ownership:
+  steward: human
+  approval_required: true
+
+interfaces:
+  consumes:
+    - event_records
+    - pattern_outputs
+    - validation_targets
+    - constraint_inputs
+  produces:
+    - integrity_reports
+    - boundary_alerts
+    - guarded_validation_outputs
+
+capabilities:
+  - integrity_guarding
+  - boundary_checking
+  - invalid_state_detection
+  - validation_alerting
 
 alignment:
   axioms_required: true
   canonical_structure: true
   interpretation_free_core: true
+
+depends_on:
+  - akasha-events
+  - akasha-attractor
+  - akasha-validation
